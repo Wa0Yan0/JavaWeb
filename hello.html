@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-    <h1 align="left">左对齐</h1>
-    <h1 align="center">居中对齐</h1>
-    <h1 align="right">右对齐</h1>
-    <a href="https://www.baidu.com">百度</a>
-    <a href="https://www.baidu.com" target="_self">百度</a>
-    <a href="https://www.baidu.com" target="_blank">百度</a>
-    <ul>
-        <li>王岩</li>
-        <li>王岩</li>
-        <li>王岩</li>
-        <li>王岩</li>
-    </ul>
+    <form id="form01" action="http://localhost:8080" method="get">
+        <table>
+            <tr>
+                <td>用户名：<input type="text" id="username" value="wayan"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+        </table>
+    </form>
+
+    兴趣爱好:
+    <input type="checkbox" value="java" name="language">java
+    <input type="checkbox" value="python" name="language">python</td>
+    <button id="all">全选</button>
+    <button id="not">全不选</button>
+    <button id="fan">反选</button>
+    <br>
+
+    请选择你喜欢的女生：
+    <select name="male" id="sel">
+        <option value="gx">高勋</option>
+        <option value="syq">宋雨琦</option>
+        <option value="cx">陈晓</option>
+        <option value="zly">赵丽颖</option>
+    </select>
+
 </body>
 </html>
