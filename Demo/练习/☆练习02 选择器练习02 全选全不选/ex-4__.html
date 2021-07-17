@@ -3,12 +3,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="../../script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../../script/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	
 	$(function(){
-		
-		
+		$("#checkedAllBtn").click(function (){
+			$(":checkbox").prop("checked",true);
+		});
+		$("#checkedNoBtn").click(function (){
+			$(":checkbox").prop("checked",false);
+		});
+		$("#checkedRevBtn").click(function (){
+			$(":checkbox[name='items']").each(function (){
+				this.checked = !this.checked;
+			});
+			let allLen = $(":checkbox[name='items']").length;
+			let checkedLen = $(":checkbox[name='items']:checked").length;
+			$("#checkedAllBox").prop("checked", allLen==checkedLen);
+		});
+		$("#sendBtn").click(function (){
+			$(":checkbox[name='items']:checked").each(function (){
+				alert(this.value);
+			});
+		});
+		$("#checkedAllBox").click(function (){
+			$(":checkbox[name='items']").prop("checked",this.checked);
+		});
+		$(":checkbox[name='items']").click(function (){
+			let allLen = $(":checkbox[name='items']").length;
+			let checkedLen = $(":checkbox[name='items']:checked").length;
+			$("#checkedAllBox").prop("checked", allLen==checkedLen);
+		});
 	});
 	
 </script>
