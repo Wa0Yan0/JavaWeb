@@ -18,7 +18,18 @@
 <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
 <script type="text/javascript">
 	$(function(){
-		
+		$("#small").bind("mouseover mouseout mousemove",function (even){
+			if(even.type == "mouseover"){
+				$("#showBig").show();
+			}else if(even.type == "mouseout"){
+				$("#showBig").hide();
+			}else if(even.type == "mousemove"){
+				$("#showBig").offset({
+					top: even.pageY + 10,
+					left: even.pageX + 10
+				});
+			}
+		})
 	});
 </script>
 </head>
