@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<books>
+    <book sn="SN001">
+        <name>Java从入门到精通</name>
+        <author>王岩</author>
+        <price>100.0</price>
+    </book>
+    <book sn="SN002">
+        <name>Python从入门到精通</name>
+        <author>王岩</author>
+        <price>100.0</price>
+    </book>
+</books>
