@@ -1,3 +1,5 @@
+package com.wayan.dao.impl;
+
 import com.wayan.dao.impl.BaseDao;
 import com.wayan.utils.JdbcUtils;
 import org.junit.Test;
