@@ -30,10 +30,10 @@ public abstract class BaseDao {
 
     /**
      * @function 查询一条数据
-     * @param tClass -任意类型的类
+     * @param tClass 任意类型的类
      * @param sql
      * @param args
-     * @param <T> -任意类型
+     * @param <T> 任意类型
      * @return 类对象
      */
     public <T> T queryForOne(Class<T> tClass, String sql, Object... args) {
