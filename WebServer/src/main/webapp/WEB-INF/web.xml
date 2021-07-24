@@ -4,14 +4,30 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     
-    
-    
+
     <servlet>
         <!--  类名      -->
         <servlet-name>HelloServlet</servlet-name>
         <!--  全类名      -->
         <servlet-class>com.example.WebServer.HelloServlet</servlet-class>
+        <!--初始化参数-->
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
     </servlet>
+
+    <!--全局参数-->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>gaoxun</param-value>
+    </context-param>
+
+    <!--全局参数-->
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
 
     <servlet-mapping>
         <!--告诉服务器，给哪个servlet使用-->
@@ -25,6 +41,12 @@
         <servlet-name>HelloServlet2</servlet-name>
         <!--  全类名      -->
         <servlet-class>com.example.WebServer.HelloServlet2</servlet-class>
+
+        <!--初始化参数-->
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>wayan</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>
