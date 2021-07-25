@@ -3,8 +3,6 @@ package com.wayan.utils;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
-import javax.sql.DataSource;
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -17,7 +15,7 @@ public class JdbcUtils {
         try {
             // 读配置文件
             Properties pro = new Properties();
-            InputStream is = ClassLoader.getSystemResourceAsStream("JDBC.properties");
+            InputStream is = JdbcUtils.class.getResourceAsStream("/JDBC.properties");
             pro.load(is);
             // 创建连接池
             dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(pro);

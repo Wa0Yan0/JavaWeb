@@ -11,11 +11,9 @@ import java.util.List;
 public class JdbcUtilsTest {
     @Test
     public void getConnectionTest() throws Exception {
-        for (int i = 0; i < 50; i++) {
-            Connection conn = JdbcUtils.getConnection();
-            System.out.println(conn);
-            JdbcUtils.closeConnection(conn);
-        }
+        Connection conn = JdbcUtils.getConnection();
+        System.out.println(conn);
+        JdbcUtils.closeConnection(conn);
     }
 
 
