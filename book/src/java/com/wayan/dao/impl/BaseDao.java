@@ -38,15 +38,16 @@ public abstract class BaseDao {
      */
     public <T> T queryForOne(Class<T> tClass, String sql, Object... args) {
         Connection conn = JdbcUtils.getConnection();
+        T query = null;
         try {
             BeanHandler<T> handler = new BeanHandler<>(tClass);
-            return runner.query(conn, sql, handler, args);
+            query = runner.query(conn, sql, handler, args);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             JdbcUtils.closeConnection(conn);
         }
-        return null;
+        return query;
     }
 
     /**
