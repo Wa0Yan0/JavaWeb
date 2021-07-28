@@ -20,10 +20,10 @@ public class LoginServlet extends HttpServlet {
         User user = userService.login(username, password);
         if(user == null){
             System.out.println("登陆失败");
-            req.getRequestDispatcher("pages/user/login.html").forward(req,resp);
+            req.getRequestDispatcher("pages/user/login.jsp").forward(req,resp);
         }else{
             System.out.println("登陆成功");
-            req.getRequestDispatcher("pages/user/login_success.html").forward(req,resp);
+            req.getRequestDispatcher("pages/user/login_success.jsp").forward(req,resp);
         }
     }
 }
