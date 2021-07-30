@@ -11,6 +11,4 @@ public class JdbcUtilsTest {
         System.out.println(conn);
         JdbcUtils.closeConnection(conn);
     }
-
-
 }

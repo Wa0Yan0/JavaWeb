@@ -24,4 +24,14 @@ public class WebUtils {
         }
         return bean;
     }
+
+    public static int getInt(String strInt, int defaultValue){
+        try {
+            return Integer.parseInt(strInt);
+        } catch (NumberFormatException e) {
+            System.out.println("strInt未获得值，使用默认值");
+        }
+        return defaultValue;
+
+    }
 }

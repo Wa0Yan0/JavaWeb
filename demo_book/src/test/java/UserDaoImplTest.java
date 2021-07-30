@@ -1,9 +1,11 @@
 import com.example.dao.impl.UserDaoImpl;
+import com.example.pojo.Book;
 import com.example.pojo.User;
 import com.example.utils.JdbcUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -37,4 +39,5 @@ public class UserDaoImplTest {
         JdbcUtils.closeConnection(conn);
         System.out.println("OK！，" + count + "行受影响");
     }
+
 }

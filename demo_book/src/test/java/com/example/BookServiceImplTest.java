@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.pojo.Book;
+import com.example.pojo.Page;
 import com.example.service.BookService;
 import com.example.service.impl.BookServiceImpl;
 import org.junit.Test;
@@ -39,5 +40,11 @@ public class BookServiceImplTest {
         List<Book> books = bookService.queryAll();
         books.forEach(System.out::println);
 
+    }
+
+    @Test
+    public void page(){
+        Page<Book> page = bookService.page(0, 4, "manager/bookServlet?action=page");
+        System.out.println(page);
     }
 }

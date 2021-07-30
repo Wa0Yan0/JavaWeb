@@ -18,8 +18,8 @@
 			<img class="logo_img" alt="" src="static/img/logo.gif" >
 			<span class="wel_word">后台管理系统</span>
 			<div>
-				<a href="book_manager.jsp">图书管理</a>
-				<a href="order_manager.jsp">订单管理</a>
+				<a href="manager/bookServlet?action=page">图书管理</a>
+				<a href="pages/manager/order_manager.jsp">订单管理</a>
 				<a href="/book/index.jsp">返回商城</a>
 			</div>
 	</div>
